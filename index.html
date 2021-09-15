@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./app.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="login-page">
+            <div class="head">
+                <h1>Login The Page:</h1>
+            </div>
+            <div class="login-form" >
+                <form name="myform" method="POST" >
+                    <div class="user-email">
+                        <input type="email" id="username" class="login" name="uname" placeholder="Enter Your Username or Email "
+                            required />
+                    </div>
+                    <div class="user-password">
+                        <input type="password" id="pwsd" class="login" name="pass" placeholder="Enter Your Password " required />
+                    </div>
+                    <div class="user-password">
+                     <p class="show-pass">show password: <input type="checkbox" onclick="myfunc()" /></p>
+                    
+                    </div>
+
+                    <div class="butn">
+                        <button id="bt" type="submit" onclick="login()">Login</button>
+                    </div>
+                   
+                </form>
+
+            </div>
+            <div class="create">
+                <a href="./signup.html"><button id="bot">Create Account</button> </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        var a = document.getElementById('pwsd');
+        
+        function myfunc(){
+            if(a.type === 'password'){
+                a.type = 'text';
+        
+            }else{
+                a.type = 'password';
+            }
+        }
+
+        
+function login(){
+    var username = document.getElementById("email-2").value
+    var password = document.getElementById("pwsd").value
+    if(username == "ubaidbhai61@gmail.com" &&  password == "ubaidbhai61"){
+       window.location.href="team.html" 
+    }else{
+     alert("incorrect email & password")
+    }
+}
+
+            </script>
+
+</body>
+
+</html> 
+
+
+
+
